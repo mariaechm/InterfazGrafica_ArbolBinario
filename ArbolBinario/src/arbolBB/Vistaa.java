@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 public class Vistaa extends javax.swing.JFrame {
 
     private SimuladorArbolBinario simulador = new SimuladorArbolBinario();
+    private Object miArbol;
 
     //Constructor
     public Vistaa() {
@@ -211,7 +212,7 @@ public class Vistaa extends javax.swing.JFrame {
         pack();
     }
 
-    private void botonInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarActionPerformed
+    private void botonInsertarActionPerformed(java.awt.event.ActionEvent evt) {                                              
         try {
             int dato = Integer.parseInt(txtdato.getText());
             if (this.simulador.insertar(dato)) {
@@ -224,39 +225,39 @@ public class Vistaa extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "No se pudo insertar el dato", "Intenta de nuevo...", 0);
 
         }
-    }//GEN-LAST:event_botonInsertarActionPerformed
+    }
 
-    private void InOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InOrdenActionPerformed
+    private void InOrdenActionPerformed(java.awt.event.ActionEvent evt) {                                        
         // TODO add your handling code here:
         String recorrido = null;
         recorrido = this.simulador.inOrden();
         
         this.impresion.setText("");
         this.impresion.setText(recorrido);
-    }//GEN-LAST:event_InOrdenActionPerformed
+    }
 
-    private void PreOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreOrdenActionPerformed
+    private void PreOrdenActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
         String recorrido = null;
         recorrido = this.simulador.preOrden();
         
         this.impresion.setText("");
         this.impresion.setText(recorrido);
-    }//GEN-LAST:event_PreOrdenActionPerformed
+    }
 
-    private void PostOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PostOrdenActionPerformed
+    private void PostOrdenActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
         String recorrido = null;
         recorrido = this.simulador.postOrden();
         
         this.impresion.setText("");
         this.impresion.setText(recorrido);
-    }//GEN-LAST:event_PostOrdenActionPerformed
+    }
 
-    private void txtdatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdatoActionPerformed
+    private void txtdatoActionPerformed(java.awt.event.ActionEvent evt) {                                        
          try {
         int dato = Integer.parseInt(txtdato.getText());
-        if (this.simulador.eliminar(dato)) {
+        if (this.miArbol != null && this.miArbol.eliminar(dato)) {
             JOptionPane.showMessageDialog(null, "El dato fue eliminado correctamente", " ...", 1);
             this.repintarArbol();
         } else {
@@ -267,7 +268,7 @@ public class Vistaa extends javax.swing.JFrame {
          }// TODO add your handling code here:
     }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
     }
 

@@ -55,7 +55,7 @@ public class SimuladorArbolBinario {
     }
     
     public void eliminar(int dato) {
-        return this.miArbol.eliminar(dato);
+        this.miArbol.eliminar(dato);
     }
 }
 
