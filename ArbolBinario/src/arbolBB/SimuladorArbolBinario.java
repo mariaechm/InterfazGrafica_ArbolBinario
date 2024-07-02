@@ -54,7 +54,7 @@ public class SimuladorArbolBinario {
         return this.miArbol.getdibujo();
     }
     
-    public boolean eliminar(int dato) {
+    public void eliminar(int dato) {
         return this.miArbol.eliminar(dato);
     }
 }
