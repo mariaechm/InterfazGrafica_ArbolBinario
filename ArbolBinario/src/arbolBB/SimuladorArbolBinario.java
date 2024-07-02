@@ -42,7 +42,6 @@ public class SimuladorArbolBinario {
         return (r);
     }
     
-    
     //Metodos para buscar dato en el nodo
     public String buscar(Integer dato) {
         boolean siEsta = this.miArbol.existe(dato);
