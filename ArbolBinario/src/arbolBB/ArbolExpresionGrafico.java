@@ -7,12 +7,13 @@ import javax.swing.*;
 
 public class ArbolExpresionGrafico extends JPanel 
 {
-    private ArbolBB miArbol;
+    private final ArbolBB miArbol;
     private HashMap posicionNodos = null;
     private HashMap subtreeSizes = null;
     private boolean dirty = true;
-    private int parent2child = 20, child2child = 30;
-    private Dimension empty = new Dimension(0,0);
+    private final int parent2child = 20;
+    private final int child2child = 30;
+    private final Dimension empty = new Dimension(0,0);
     private FontMetrics fm = null;
     
     

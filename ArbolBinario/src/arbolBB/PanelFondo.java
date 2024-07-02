@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
  */
 public class PanelFondo extends javax.swing.JPanel {
 
-    private String ruta;
+    private final String ruta;
 
     /**
      * Constructor de la clase PanelFondo.
